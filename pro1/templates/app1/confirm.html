@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{% block content %}
+    <form method="post">
+        {% csrf_token %}
+        <h2>ARE YOU SURE?</h2>
+        <button>YES</button>
+        <a href="{% url 'retrieve_url' %}">
+            <button>NO</button>
+        </a>
+    </form>
+{% endblock %}
+</body>

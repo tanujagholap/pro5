@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{% block content %}
+    <form method="post">
+        {% csrf_token %}
+
+        <label>USERNAME</label>
+        <input type="text" name="un">
+        <br><br>
+
+        <label>USERNAME</label>
+        <input type="password" name="pw">
+        <br><br>
+
+        <input type="submit" value="login">
+
+    </form>
+{% endblock %}
+</body>
